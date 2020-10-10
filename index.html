@@ -1,8 +1,15 @@
 <html>
 <style>
+    #body {
+        background: linear-gradient(to right, teal, white);
+    }
+    
     #title {
-        width: 100px;
-        height: 100px;
+        scroll-margin-inline: 100px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+        width: 75px;
+        height: 75px;
         transition: width 2s;
     }
     
@@ -12,10 +19,12 @@
 </style>
 
 <body>
-    <div id="title" algin="center">
-        <h1 align=center>Hacktoberfest 2020</h1>
+    <div id="body">
+        <div id="title">
+            <h1 align="center">Hacktoberfest 2020</h1>
+        </div>
+        <div id="osmMap"></div>
     </div>
-    <div id="osmMap"></div>
     <script src="js/OpenLayers.js"></script>
     <script>
         map = new OpenLayers.Map("osmMap");
